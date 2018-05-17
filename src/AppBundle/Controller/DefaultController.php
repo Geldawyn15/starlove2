@@ -26,7 +26,6 @@ class DefaultController extends Controller
         $api = new CallApi();
         $Call = $api->getAll();
 
-
         return $this->render('test.html.twig', [
             'call' => $Call,
         ]);

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/home.css">
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mx-auto   " style="width: 20rem;">
+                    <img class="card-img-top img-responsive" src="https://i.imgur.com/4QVsqAn.jpg" alt="Card image cap">
+                </div>
+                <div class="row ">
+                    <div class="col-md-6 d-flex justify-content-end mt-5">
+                        <a href="#" class="btn text-white">Go somewhere</a>
+                    </div>
+                    <div class="col-md-6 mt-5">
+                        <a href="#" class="btn text-white">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 left">
+                <div class="card  mx-auto" style="width: 25rem;">
+                    <img class="card-img-top img-responsive" src="https://i.imgur.com/Ir52plv.png" alt="Card image cap">
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

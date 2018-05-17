@@ -1,0 +1,40 @@
+@font-face {
+    font-family: Fiilxgirl;
+    src: Filxgirl.TTF format("TTF");
+}
+body{
+background-image: url(https://i.imgur.com/14uH65r.jpg);
+    font-family: Fiilxgirl;
+}
+.card{
+    margin-top: 5rem;
+    box-shadow: 5px 10px;
+
+}
+.btn{
+    background-color: #000000;
+}
+.left{
+    border-left: 3px solid #000000;
+}
+.container-fluid{
+    padding-top:100px;
+}
+
+.username {
+    background-color: deeppink;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.species {
+
+    background-color: lightpink;
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+.toto {
+    background-color: green;
+}
