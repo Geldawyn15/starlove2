@@ -15,10 +15,24 @@ class LoginController extends Controller
      */
     public function LoginAction(Request $request)
     {
-        $form = $this->createForm('AppBundle\Form\LoginType', $user);
+        $form = $this->createForm('AppBundle\Form\LoginType');
         $form->handleRequest($request);
 
-        return $this->render("Front/login.html.twig", array(
+        return $this->render("login/login.html.twig", array(
+            'form' => $form->createView()
+        ));
+    }
+
+    /**
+     * @Route("/registration", name="registration")
+     * @Method({"GET", "POST"})
+     */
+    public function RegistrationAction(Request $request)
+    {
+        $form = $this->createForm('AppBundle\Form\RegistrationType');
+        $form->handleRequest($request);
+
+        return $this->render("login/registration.html.twig", array(
             'form' => $form->createView()
         ));
     }

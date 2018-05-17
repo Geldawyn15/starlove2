@@ -8,14 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class FrontController extends Controller
 {
 
-    /**
-     * @Route("/registration", name="registration")
-     * @Method({"GET", "POST"})
-     */
-    public function RegistrationAction()
-    {
-        return $this->render("Front/registration.html.twig");
-    }
+
 
     /**
      * @Route("/", name="homepage")
