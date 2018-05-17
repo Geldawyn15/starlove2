@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+{% for calls in call %}
+    <div class="row">
+        <div class=" col-md-3">
+    <p> {{ calls.species }}</p>
+    <img src="{{ calls.image }}"> </img>
+        </div>
+    </div>
+
+    {% endfor %}
+    </div>
+
+{% endblock %}
