@@ -18,6 +18,8 @@ class LoginController extends Controller
         $form = $this->createForm('AppBundle\Form\LoginType');
         $form->handleRequest($request);
 
+
+
         return $this->render("login/login.html.twig", array(
             'form' => $form->createView()
         ));

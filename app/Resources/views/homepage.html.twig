@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block stylesheets %}
+    <script src="/assets/js.js"></script>
+    <link rel="stylesheet" href="/assets/home.css">{% endblock %}
+
+{% block body %}
+<nav class="navbar navbar-expand-lg  ">
+    <a class="navbar-brand" href="#">StarLove</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Profil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Découvrir</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+    <div class="side2">
+        <div class="col-md-2 sticky" id="side">
+            {{ form_start(form) }}
+
+            {{ form_label(form.gender) }}
+            {{ form_widget(form.gender) }}
+
+            {{ form_label(form.Statut) }}
+            {{ form_widget(form.Statut) }}
+
+            {{ form_label(form.Age) }}
+            {{ form_widget(form.Age) }}
+
+
+            <span class="group-btn ">
+                <a href="#" class="bouton btn btn-md">Rechercher<i class="fa fa-sign-in"></i></a>
+            </span>
+        {{ form_end(form) }}
+
+        </div>
+    </div>
+
+{% endblock %}
