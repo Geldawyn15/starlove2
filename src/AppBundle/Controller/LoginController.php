@@ -2,10 +2,14 @@
 namespace AppBundle\Controller;
 
 
+use AppBundle\Entity\Image;
+use AppBundle\Form\LoginType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class LoginController extends Controller
 {
@@ -15,27 +19,31 @@ class LoginController extends Controller
      */
     public function LoginAction(Request $request)
     {
-        $form = $this->createForm('AppBundle\Form\LoginType');
+        $form = $this->createForm(LoginType::class);
         $form->handleRequest($request);
 
+ 
+        if ($form->isSubmitted() && $form->isValid()) {
+            $data = $form->getData();
+            $_SESSION['username'] = $data['username'];
+            $_SESSION['species'] = $data['species'];
 
+            /** @var UploadedFile $file */
+            $file = $data['image'];
+
+            $fileName = 'image.jpg';
+            $file->move($this->getParameter('image_directory'), $fileName);
+
+            return $this->redirectToRoute('homepage');
+        }
+
+
+ 
 
         return $this->render("login/login.html.twig", array(
             'form' => $form->createView()
         ));
     }
 
-    /**
-     * @Route("/registration", name="registration")
-     * @Method({"GET", "POST"})
-     */
-    public function RegistrationAction(Request $request)
-    {
-        $form = $this->createForm('AppBundle\Form\RegistrationType');
-        $form->handleRequest($request);
 
-        return $this->render("login/registration.html.twig", array(
-            'form' => $form->createView()
-        ));
-    }
 }

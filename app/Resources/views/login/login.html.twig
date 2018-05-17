@@ -14,13 +14,16 @@
                     {{ form_label(form.username) }}
                     {{ form_widget(form.username) }}
                     </br>
-                    {{ form_label(form.password) }}
-                    {{ form_widget(form.password) }}
 
-                    <div class="wrapper">
-                    <span class="group-btn ">
-                        <a href="#" class="bouton btn btn-md">login <i class="fa fa-sign-in"></i></a>
-                    </span>
+                    {{ form_label(form.species) }}
+                    {{ form_widget(form.species) }}
+                    </br>
+                    {{ form_label(form.image) }}
+                    {{ form_widget(form.image) }}
+
+                    {{ form_row(form.login) }}
+                    
+ 
                         {{ form_end(form) }}
                     </div>
 
