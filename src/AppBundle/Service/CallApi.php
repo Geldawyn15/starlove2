@@ -18,9 +18,12 @@ class CallApi
         $response = $this->client->request('GET', 'all.json');
         return json_decode($response->getBody()->getContents());
     }
-    public function getAllByGender($gender)
+    public function getAllById($id)
     {
         $response = $this->client->request('GET', 'all.json');
         $datas = json_decode($response->getBody()->getContents());
+        return $datas[$id];
     }
+
+
 }
