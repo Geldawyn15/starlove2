@@ -7,7 +7,7 @@ background-image: url(https://i.imgur.com/14uH65r.jpg);
     font-family: Fiilxgirl;
 }
 .card{
-    margin-top: 5rem;
+    margin-top: -4rem;
     box-shadow: 5px 10px;
 
 }
@@ -62,4 +62,12 @@ background-image: url(https://i.imgur.com/14uH65r.jpg);
 
 .toto{
     background-color: black;
+}
+
+.question{
+    margin-top: 1rem;
+    background-color: purple;
+    border-radius: 1.5rem;
+    margin-left: 3rem;
+    font-size: 1.5rem;
 }
