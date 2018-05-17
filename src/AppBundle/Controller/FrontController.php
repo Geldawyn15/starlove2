@@ -85,7 +85,7 @@ class FrontController extends Controller
         $form = $this->createForm('AppBundle\Form\FilterType');
         $form->handleRequest($request);
 
-        return $this->render("cougar.html.twig", array(
+        return $this->render("cougar/cougar.html.twig", array(
             'form' => $form->createView()
         ));
     }
@@ -99,7 +99,7 @@ class FrontController extends Controller
         $id = array_rand($array);
         $Cougar = $api->getAllById($array[$id]);
 
-        return $this->render('cougar.html.twig', [
+        return $this->render('cougar/cougar.html.twig', [
             'cougar' => $Cougar,
         ]);
     }
@@ -138,6 +138,24 @@ class FrontController extends Controller
         $form->handleRequest($request);
 
         return $this->render("jonbrisé.html.twig");
+      
+    /**
+     * @Route("/question1", name="question1")
+     * @Method("GET")
+     */
+    public function Question1Action(Request $request)
+    {
+        $api = new CallApi();
+        $Cougar = $api->getAllById(4);
+        //var_dump($Cougar);
+
+        return $this->render('cougar/cougarQuestion1.html.twig', [
+            'cougar' => $Cougar,
+            'image' => $_SESSION['image'],
+            'username' => $_SESSION['username'],
+            'species' => $_SESSION['species']
+        ]);
+
     }
 
 

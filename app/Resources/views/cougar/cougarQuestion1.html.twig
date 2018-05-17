@@ -9,16 +9,13 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="card mx-auto   " style="width: 30rem;">
-                    <img class="card-img-top img-responsive" src="https://i.imgur.com/OBHNVUG.jpg" alt="Card image cap">
-                    <span class="username">Donald Trump</span>
-                    <span class="species">Human</span>
+                    <img class="card-img-top img-responsive" src="{{ cougar.image }}" alt="Card image cap">
+                    <span class="username">{{ cougar.name }}</span>
+                    <span class="species">{{ cougar.species }}</span>
                 </div>
                 <div class="row ">
                     <div class="col-md-6 d-flex justify-content-end mt-5">
-                        <a href="#" class="btn text-white">Like</a>
-                    </div>
-                    <div class="col-md-6 mt-5">
-                        <a href="edouard.html.twig" class="btn text-white">Dislike</a>
+                        <p>Préfères-tu l'experience a l'ignorance de la jeunesse ?</p>
                     </div>
                 </div>
             </div>
@@ -28,9 +25,16 @@
                     <span class="username">{{ username }}</span>
                     <span class="species"> {{ species }}</span>
                 </div>
+                <div class="row justify-content-center boutton">
+                    <div class="col-md-3 tata">
+                        <a href="#" class="oui btn btn-lg text-white">Oui</a>
+                    </div>
+                    <div class="col-md-3 tata">
+                        <a href="/sylvain" class="non btn btn-lg text-white">Non</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
 {% endblock %}
-
