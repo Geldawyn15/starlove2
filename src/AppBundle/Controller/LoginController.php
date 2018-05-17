@@ -22,6 +22,7 @@ class LoginController extends Controller
         $form = $this->createForm(LoginType::class);
         $form->handleRequest($request);
 
+ 
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
             $_SESSION['username'] = $data['username'];
@@ -35,6 +36,9 @@ class LoginController extends Controller
 
             return $this->redirectToRoute('homepage');
         }
+
+
+ 
 
         return $this->render("login/login.html.twig", array(
             'form' => $form->createView()
