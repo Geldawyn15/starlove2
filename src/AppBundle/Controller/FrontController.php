@@ -43,6 +43,20 @@ class FrontController extends Controller
         return $this->render("Front/message.html.twig");
     }
 
+    /**
+     * @Route("/edouard", name="edouard")
+     * @Method("GET")
+     */
+    public function EdouardAction(Request $request)
+    {
+        $form = $this->createForm('AppBundle\Form\FilterType');
+        $form->handleRequest($request);
+
+        return $this->render("edouard.html.twig", array(
+            'form' => $form->createView()
+        ));
+    }
+
 
 
 }

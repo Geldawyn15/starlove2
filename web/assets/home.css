@@ -1,23 +1,16 @@
-.navbar{
-    background-color: deeppink;
+body{
+    background-image: url(https://i.imgur.com/14uH65r.jpg);
 }
-
-.navbar a {
-    color: purple;
+.card{
+    margin-top: 5rem;
+    box-shadow: 5px 10px;
 }
-
-#side{
-    background-color: lightpink;
-    position: fixed;
-    top: 60px;
+.btn{
+    background-color: #000000;
 }
-
-.bouton{
-    background-color: mistyrose;
-    margin-bottom: 1rem;
+.left{
+    border-left: 3px solid #000000;
 }
-
-.side2{
-    height: 2000px;
+.container-fluid{
+    padding-top:100px;
 }
-
