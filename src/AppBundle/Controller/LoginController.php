@@ -22,7 +22,7 @@ class LoginController extends Controller
         $form = $this->createForm(LoginType::class);
         $form->handleRequest($request);
 
- 
+
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
             $_SESSION['username'] = $data['username'];
@@ -31,14 +31,14 @@ class LoginController extends Controller
             /** @var UploadedFile $file */
             $file = $data['image'];
 
-            $fileName = 'image.jpg';
+            $fileName = 'image.png';
             $file->move($this->getParameter('image_directory'), $fileName);
+            $image = 'assets/'.$fileName;
+            $_SESSION['image'] =  $image ;
 
             return $this->redirectToRoute('homepage');
         }
 
-
- 
 
         return $this->render("login/login.html.twig", array(
             'form' => $form->createView()

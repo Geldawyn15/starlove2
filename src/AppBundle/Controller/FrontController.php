@@ -6,6 +6,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+
 
 class FrontController extends Controller
 {
@@ -21,8 +23,12 @@ class FrontController extends Controller
         $form = $this->createForm('AppBundle\Form\FilterType');
         $form->handleRequest($request);
 
+
+
         return $this->render("homepage.html.twig", array(
-            'form' => $form->createView()
+            'username' => $_SESSION['username'],
+            'species' => $_SESSION['species'],
+            'image' => $_SESSION['image']
         ));
     }
 
