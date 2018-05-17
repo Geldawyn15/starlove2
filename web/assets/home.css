@@ -35,6 +35,31 @@ background-image: url(https://i.imgur.com/14uH65r.jpg);
 
 }
 
-.toto {
-    background-color: green;
+.tata {
+    background-color: purple;
+    border-radius: 1.5rem;
+}
+
+.boutton {
+    margin-top: 100px;
+}
+
+.oui{
+    margin-top: 10px;
+    padding: 0px;
+
+    background-color: hotpink;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.non{
+    margin-top: 10px;
+    background-color: pink;
+    width: 100%;
+    padding: 0px;
+
+}
+
+.toto{
+    background-color: black;
 }
