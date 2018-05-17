@@ -1,5 +1,4 @@
 {% extends 'base.html.twig' %}
-{% form_theme form 'bootstrap_4_layout.html.twig' %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="/assets/home.css">
@@ -9,15 +8,16 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-                <div class="card mx-auto   " style="width: 23rem;">
-                    <img class="card-img-top img-responsive" src="https://i.imgur.com/hyx3QA1.png?1" alt="Card image cap">
+                <div class="card mx-auto" style="width: 20rem;">
+                        <img class="card-img-top img-responsive" src= "{{ robot.image }} "alt="Card image cap">
                 </div>
+
                 <div class="row ">
                     <div class="col-md-6 d-flex justify-content-end mt-5">
                         <a href="#" class="btn text-white">Like</a>
                     </div>
                     <div class="col-md-6 mt-5">
-                        <a href="/cougar" class="btn text-white">Dislike</a>
+                        <a href="/sylvain" class="btn text-white">Dislike</a>
                     </div>
                 </div>
             </div>

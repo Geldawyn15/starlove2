@@ -95,14 +95,50 @@ class FrontController extends Controller
      */
     public function CougarApi(){
         $api = new CallApi();
-        $Cougar = $api->getAllById(4);
-        //var_dump($Cougar);
+        $array = [4, 6, 26, 41, 72];
+        $id = array_rand($array);
+        $Cougar = $api->getAllById($array[$id]);
 
         return $this->render('cougar/cougar.html.twig', [
             'cougar' => $Cougar,
         ]);
     }
+    /**
+     * @Route("/jedi", name="jedi")
+     */
+    public function JediApi(){
+        $api = new CallApi();
+        $array = [0, 30, 42, 49, 50];
+        $id = array_rand($array);
+        $Jedi = $api->getAllById($array[$id]);
 
+        return $this->render('jedi.html.twig', [
+            'jedi' => $Jedi,
+        ]);
+    }
+    /**
+     * @Route("/robot", name="robot")
+     */
+    public function RobotApi(){
+        $api = new CallApi();
+        $array = [1, 2, 7, 73, 85];
+        $id = array_rand($array);
+        $Robot = $api->getAllById($array[$id]);
+
+        return $this->render('robot.html.twig', [
+            'robot' => $Robot,
+        ]);
+    }
+    /**
+     * @Route("/jonbrisé", name="jonbrisé")
+     */
+    public function JonbriséAction(Request $request)
+    {
+        $form = $this->createForm('AppBundle\Form\FilterType');
+        $form->handleRequest($request);
+
+        return $this->render("jonbrisé.html.twig");
+      
     /**
      * @Route("/question1", name="question1")
      * @Method("GET")
