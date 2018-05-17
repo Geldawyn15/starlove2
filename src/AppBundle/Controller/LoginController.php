@@ -40,8 +40,6 @@ class LoginController extends Controller
         }
 
 
-
-
         return $this->render("login/login.html.twig", array(
             'form' => $form->createView()
         ));
