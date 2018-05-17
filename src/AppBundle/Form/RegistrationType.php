@@ -39,15 +39,5 @@ class RegistrationType extends AbstractType
             ));
         }
 
-    public function ConfigureOption(OptionsResolver $resolver)
-    {
-        $resolver->setDefaults(array(
-            'data_class'=>'AppBundle\Entity\User'
-        ));
-    }
 
-    public function getBlockPrefix()
-    {
-        return 'appbundle_user';
-    }
 }

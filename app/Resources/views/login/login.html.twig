@@ -7,7 +7,7 @@
 
     <div class="container-fluid ">
         <div class="row">
-            <div class="col-md-6 offset-md-3">
+            <div class="col-md-4 offset-md-3">
                 <div class="form-login">
                     <h4>Se connecter</h4>
                     {{ form_start(form) }}
@@ -16,11 +16,13 @@
                     </br>
                     {{ form_label(form.password) }}
                     {{ form_widget(form.password) }}
+
                     <div class="wrapper">
-           <span class="group-btn">
-               <a href="#" class="btn btn-primary btn-md">login <i class="fa fa-sign-in"></i></a>
-           </span>
+                    <span class="group-btn ">
+                        <a href="#" class="bouton btn btn-md">login <i class="fa fa-sign-in"></i></a>
+                    </span>
                         {{ form_end(form) }}
+                    </div>
 
                     </div>
                 </div>

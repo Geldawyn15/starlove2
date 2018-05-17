@@ -1,0 +1,23 @@
+.navbar{
+    background-color: deeppink;
+}
+
+.navbar a {
+    color: purple;
+}
+
+#side{
+    background-color: lightpink;
+    position: fixed;
+    top: 60px;
+}
+
+.bouton{
+    background-color: mistyrose;
+    margin-bottom: 1rem;
+}
+
+.side2{
+    height: 2000px;
+}
+
