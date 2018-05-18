@@ -1,11 +1,18 @@
 body{
 background-image: url(https://i.imgur.com/oORPEYd.jpg);
-    font-family: Fiilxgirl;
-}
+    font-family: 'Indie Flower', cursive !important;
+    font-size: 1.5rem;}
 .card{
     margin-top: 3rem;
     box-shadow: 5px 10px;
 }
 .btn {
     background-color: #000000;
+}
+
+.kiki {
+    background-color: purple;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.8rem;
 }
