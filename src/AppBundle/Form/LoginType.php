@@ -17,7 +17,9 @@ class LoginType extends AbstractType
             ->add('username', TextType::class)
             ->add('species', TextType::class)
             ->add('image', FileType::class)
-            ->add('login', SubmitType::class);
+            ->add('login', SubmitType::class, array(
+                'attr'=>array('class'=>'bouton')
+            ));
     }
 
 }
