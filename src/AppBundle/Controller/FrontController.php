@@ -33,24 +33,6 @@ class FrontController extends Controller
     }
 
     /**
-     * @Route("/profil", name="profil")
-     * @Method({"GET", "POST"})
-     */
-    public function ProfilAction()
-    {
-        return $this->render("Front/profil.html.twig");
-    }
-
-    /**
-     * @Route("/message", name="message")
-     * @Method({"GET", "POST"})
-     */
-    public function MessageAction()
-    {
-        return $this->render("Front/message.html.twig");
-    }
-
-    /**
      * @Route("/edouard", name="edouard")
      * @Method("GET")
      */
@@ -225,7 +207,7 @@ class FrontController extends Controller
         public function Question4Action(Request $request)
     {
         $api = new CallApi();
-        $array = [0, 30, 42, 49, 50];
+            $array = [0, 30, 42, 49, 50];
         $id = $_SESSION['idJedi'];
         $Jedi = $api->getAllById($array[$id]);
 
@@ -358,6 +340,42 @@ class FrontController extends Controller
         $form->handleRequest($request);
 
         return $this->render("success.html.twig");
+    }
+
+    /**
+     * @Route("/profil" , name="profil" )
+     */
+    public function ProfilAction(Request $request)
+    {
+        $api = new CallApi();
+        $form = $this->createForm('AppBundle\Form\FilterType');
+        $form->handleRequest($request);
+
+        $array1 = [4, 6, 26, 41, 72];
+        $array2 = [0, 30, 42, 49, 50];
+        $array3 = [1, 2, 7, 73, 85];
+
+        $Cougar = $_SESSION['id'];
+        $Jedi = $_SESSION['idJedi'];
+        $Robot = $_SESSION['idRobot'];
+
+        $Cougar = $api->getAllById($array1[$Cougar]);
+        $Jedi = $api->getAllById($array2[$Jedi]);
+        $Robot = $api->getAllById($array3[$Robot]);
+
+
+
+
+
+        return $this->render("profil.html.twig", [
+            'image' => $_SESSION['image'],
+            'username' => $_SESSION['username'],
+            'species' => $_SESSION['species'],
+            'cougar' => $Cougar,
+            'jedi' => $Jedi,
+            'robot' => $Robot,
+
+        ]);
     }
  
 
