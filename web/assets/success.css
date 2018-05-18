@@ -1,6 +1,6 @@
 body{
     background-image: url("https://i.imgur.com/RIdJsaQ.png");
-    background-size: cover;
+    background-size: cover-no-repeat;
 }
 .card{
     margin-top: 3rem;
