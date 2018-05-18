@@ -176,8 +176,10 @@ class FrontController extends Controller
     }
 
 
+
+    
      /**
-     * @Route("/question2", name="question2")
+      * @Route("/question2", name="question2")
      * @Method("GET")
      */
     public function Question2Action(Request $request)
@@ -323,5 +325,29 @@ class FrontController extends Controller
 
     }
 
+ 
+
+    /**
+     * @Route("/jonbrisé2", name="jonbrisé2")
+     */
+    public function Jonbrisé2Action(Request $request)
+    {
+        $form = $this->createForm('AppBundle\Form\FilterType');
+        $form->handleRequest($request);
+
+        return $this->render("jonbrisé2.html.twig");
+    }
+
+    /**
+     * @Route("/jonbrisé3" , name="jonbrisé3")
+     */
+    public function Jonbrisé3Action(Request $request)
+    {
+        $form = $this->createForm('AppBundle\Form\FilterType');
+        $form->handleRequest($request);
+
+        return $this->render("jonbrisé3.html.twig");
+    }
+ 
 
 }
