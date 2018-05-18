@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends '../base.html.twig' %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="/assets/home.css">
@@ -10,6 +10,8 @@
             <div class="col-md-6">
                 <div class="card mx-auto" style="width: 20rem;">
                         <img class="card-img-top img-responsive" src= "{{ jedi.image }} "alt="Card image cap">
+                    <span class="username">{{ jedi.name }}</span>
+                    <span class="species">{{ jedi.species }}</span>
                 </div>
 
                 <div class="row ">
@@ -18,6 +20,8 @@
                     </div>
                     <div class="col-md-6 mt-5">
                         <a href="/sylvain" class="btn text-white">Dislike</a>
+                        <span class="username">{{ username }}</span>
+                        <span class="species">{{ species }}</span>
                     </div>
                 </div>
             </div>

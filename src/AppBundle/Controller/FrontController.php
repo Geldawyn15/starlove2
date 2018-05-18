@@ -106,8 +106,11 @@ class FrontController extends Controller
         $id = array_rand($array);
         $Jedi = $api->getAllById($array[$id]);
 
-        return $this->render('jedi.html.twig', [
+        return $this->render('jedi/jedi.html.twig', [
             'jedi' => $Jedi,
+            'image' => $_SESSION['image'],
+            'username' => $_SESSION['username'],
+            'species' => $_SESSION['species']
         ]);
     }
     /**
@@ -120,8 +123,11 @@ class FrontController extends Controller
         $Robot = $api->getAllById($array[$id]);
 
 
-        return $this->render('robot.html.twig', [
+        return $this->render('droide/robot.html.twig', [
             'robot' => $Robot,
+            'image' => $_SESSION['image'],
+            'username' => $_SESSION['username'],
+            'species' => $_SESSION['species']
         ]);
     }
     /**
