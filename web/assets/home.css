@@ -1,6 +1,9 @@
-
 body{
-background-image: url(https://i.imgur.com/14uH65r.jpg);
+    background-image: url(eclair.png), url(https://i.imgur.com/14uH65r.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    font-family: 'Indie Flower', cursive !important;
+    font-size: 1.5rem;
 }
 .card{
     margin-top: -4rem;
@@ -32,9 +35,7 @@ background-image: url(https://i.imgur.com/14uH65r.jpg);
     color: purple;
 
 }
-.left{
-    border-left: 13px dotted limegreen;
-}
+
 .container-fluid{
     padding-top:100px;
 }
@@ -56,6 +57,8 @@ background-image: url(https://i.imgur.com/14uH65r.jpg);
 .tata {
     background-color: purple;
     border-radius: 1.5rem;
+    margin-right: 1rem;
+
 }
 
 .boutton {
@@ -64,8 +67,6 @@ background-image: url(https://i.imgur.com/14uH65r.jpg);
 
 .oui{
     margin-top: 10px;
-    padding: 0px;
-
     background-color: hotpink;
     margin-bottom: 1rem;
     width: 100%;
@@ -86,6 +87,7 @@ background-image: url(https://i.imgur.com/14uH65r.jpg);
     margin-top: 1rem;
     background-color: purple;
     border-radius: 1.5rem;
-    margin-left: 3rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 0.5rem;
 }
