@@ -348,6 +348,17 @@ class FrontController extends Controller
 
         return $this->render("jonbrisé3.html.twig");
     }
+
+    /**
+     * @Route("/succes" , name="succes")
+     */
+    public function SuccesAction(Request $request)
+    {
+        $form = $this->createForm('AppBundle\Form\FilterType');
+        $form->handleRequest($request);
+
+        return $this->render("success.html.twig");
+    }
  
 
 }
