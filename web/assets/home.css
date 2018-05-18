@@ -1,24 +1,39 @@
-@font-face {
-    font-family: Fiilxgirl;
-    src: Filxgirl.TTF format("TTF");
-}
+
 body{
 background-image: url(https://i.imgur.com/14uH65r.jpg);
-    font-family: Fiilxgirl;
 }
 .card{
     margin-top: -4rem;
     box-shadow: 5px 10px;
 
 }
+
+.card-img-top {
+    min-width: 368px;
+    max-width: 368px;
+    min-height: 425px;
+    max-height: 425px;
+}
+.card-img-top2 {
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 425px;
+    max-height: 425px;
+}
+.trump {
+    min-width: 415px;
+    max-width: 415 px;
+    min-height: 425px;
+    max-height: 425px;
+}
 .btn{
     background-color: hotpink;
-    border-style: 5git adpx solid red ;
+    border: 5px solid red;
     color: purple;
 
 }
 .left{
-    border-left: 3px solid #000000;
+    border-left: 13px dotted limegreen;
 }
 .container-fluid{
     padding-top:100px;
