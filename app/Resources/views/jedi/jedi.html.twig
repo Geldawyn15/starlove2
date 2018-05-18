@@ -1,4 +1,4 @@
-{% extends '../base.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="/assets/home.css">
@@ -16,18 +16,19 @@
 
                 <div class="row ">
                     <div class="col-md-6 d-flex justify-content-end mt-5">
-                        <a href="#" class="btn text-white">Like</a>
+                        <a href="/question4" class="btn text-white">Like</a>
                     </div>
                     <div class="col-md-6 mt-5">
                         <a href="/sylvain" class="btn text-white">Dislike</a>
-                        <span class="username">{{ username }}</span>
-                        <span class="species">{{ species }}</span>
+
                     </div>
                 </div>
             </div>
             <div class="col-md-6 left">
                 <div class="card  mx-auto" style="width: 25rem;">
                     <img class="card-img-top img-responsive" src="https://i.imgur.com/Ir52plv.png" alt="Card image cap">
+                    <span class="username">{{ username }}</span>
+                    <span class="species">{{ species }}</span>
                 </div>
             </div>
         </div>

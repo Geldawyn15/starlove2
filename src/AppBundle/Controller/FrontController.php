@@ -105,6 +105,7 @@ class FrontController extends Controller
         $array = [0, 30, 42, 49, 50];
         $id = array_rand($array);
         $Jedi = $api->getAllById($array[$id]);
+        $_SESSION['idJedi'] = $id;
 
         return $this->render('jedi/jedi.html.twig', [
             'jedi' => $Jedi,
@@ -121,6 +122,7 @@ class FrontController extends Controller
         $array = [1, 2, 7, 73, 85];
         $id = array_rand($array);
         $Robot = $api->getAllById($array[$id]);
+        $_SESSION['idRobot'] = $id;
 
 
         return $this->render('droide/robot.html.twig', [
@@ -163,7 +165,6 @@ class FrontController extends Controller
     }
 
     /**
-<<<<<<< HEAD
      * @Route("/vader", name="vader")
      */
     public function VaderAction(Request $request)
@@ -174,7 +175,8 @@ class FrontController extends Controller
         return $this->render("vader.html.twig");
     }
 
-=======
+
+     /**
      * @Route("/question2", name="question2")
      * @Method("GET")
      */
@@ -222,9 +224,9 @@ class FrontController extends Controller
     {
         $api = new CallApi();
         $array = [0, 30, 42, 49, 50];
-        $id = array_rand($array);
+        $id = $_SESSION['idJedi'];
         $Jedi = $api->getAllById($array[$id]);
-        $_SESSION['idJedi'] = $id;
+
 
 
         return $this->render('jedi/jediQuestion4.html.twig', [
@@ -286,9 +288,9 @@ class FrontController extends Controller
     {
         $api = new CallApi();
         $array = [1, 2, 7, 73, 85];
-        $id = array_rand($array);
+        $id = $_SESSION['idRobot'];
         $Robot = $api->getAllById($array[$id]);
-        $_SESSION['idRobot'] = $id;
+
 
 
         return $this->render('droide/droideQuestion7.html.twig', [
@@ -320,6 +322,6 @@ class FrontController extends Controller
         ]);
 
     }
->>>>>>> cadfc863ad299c9eb52735cb7c173fae20a52823
+
 
 }
