@@ -1,6 +1,8 @@
 body{
     background-image: url(https://i.imgur.com/R3jj30p.jpg?1);
     background-size: cover;
+    font-family: 'Indie Flower', cursive !important;
+    font-size: 1.5rem;
 }
 .card{
     margin-top: 3rem;
@@ -8,4 +10,11 @@ body{
 }
 .btn {
     background-color: #000000;
+}
+
+.kiki {
+    background-color: purple;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.8rem;
 }
