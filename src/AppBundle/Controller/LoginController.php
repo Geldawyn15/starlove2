@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 class LoginController extends Controller
 {
     /**
-     * @Route("/login", name="login")
+     * @Route("/", name="login")
      * @Method({"GET", "POST"})
      */
     public function LoginAction(Request $request)

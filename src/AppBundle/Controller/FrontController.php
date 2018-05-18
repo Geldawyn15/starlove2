@@ -15,7 +15,7 @@ class FrontController extends Controller
 
 
     /**
-     * @Route("/", name="homepage")
+     * @Route("/accueil", name="homepage")
      * @Method("GET")
      */
     public function HomepageAction(Request $request)
