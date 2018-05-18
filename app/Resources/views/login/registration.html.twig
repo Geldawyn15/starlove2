@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <link rel="stylesheet" href="/assets/registration.css">
+    {% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+
+
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-md-4 offset-md-3">
+                <div class="form-login">
+                    <h4>S'inscrire</h4>
+                    {{ form_start(form) }}
+                    {{ form_label(form.username) }}
+                    {{ form_widget(form.username) }}
+                    </br>
+                    {{ form_label(form.gender) }}
+                    {{ form_widget(form.gender) }}
+                    </br>
+                    {{ form_label(form.age) }}
+                    {{ form_widget(form.age) }}
+                    </br>
+                    {{ form_label(form.galaxie) }}
+                    {{ form_widget(form.galaxie) }}
+                    </br>
+                    {{ form_label(form.Espece) }}
+                    {{ form_widget(form.Espece) }}
+                    </br>
+                    {{ form_label(form.mail) }}
+                    {{ form_widget(form.mail) }}
+                    </br>
+                    {{ form_widget(form.password) }}
+                    <div class="wrapper">
+                    <span class="group-btn ">
+                        <a href="#" class="bouton btn btn-md">login <i class="fa fa-sign-in"></i></a>
+                    </span>
+                        {{ form_end(form) }}
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        {% for i in 0..0 %}
+            <div class="row">
+        {% for calls in call %}
+            <div class="col-md-3">
+                <div class="card" style="width: 12rem; height: 15rem;">
+                    <img class="card-img-top" style="width: 12rem; height: 15rem;" src="{{ calls.image }}" alt="Card image cap" data-toggle="modal" data-target="#{{ calls.id }}">
+                </div>
+                <br>
+                <div class="modal fade bd-example-modal-lg" id="{{ calls.id }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="background-image: https://i.imgur.com/14uH65r.jpg;">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                                <div class="card mx-auto" style="width: 55rem;">
+                                    <img class="card-img-top mx-auto" style="width: 30rem; height: 35rem;" src="{{ calls.image }}" alt="Card image cap">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item mx-auto">{{ calls.id }}</li>
+                                        <li class="list-group-item mx-auto"><a href="{{ calls.wiki }}" target = "_blank" class="btn btn-secondary">En savoir plus</a></li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+    </div>
+            {% endfor %}
+    </div>
+{% endblock %}

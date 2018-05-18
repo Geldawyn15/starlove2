@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/home.css">
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mx-auto" style="width: 20rem;">
+                        <img class="card-img-top img-responsive" src= "{{ jedi.image }} "alt="Card image cap">
+                    <span class="username">{{ jedi.name }}</span>
+                    <span class="species">{{ jedi.species }}</span>
+                </div>
+
+                <div class="row ">
+                    <div class="col-md-6 d-flex justify-content-end mt-5">
+                        <a href="/question4" class="btn text-white">Like</a>
+                    </div>
+                    <div class="col-md-6 mt-5">
+                        <a href="/jedi" class="btn text-white">Dislike</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 left">
+                <div class="card  mx-auto" style="width: 25rem;">
+                    <img class="card-img-top img-responsive" src="https://i.imgur.com/Ir52plv.png" alt="Card image cap">
+                    <span class="username">{{ username }}</span>
+                    <span class="species">{{ species }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

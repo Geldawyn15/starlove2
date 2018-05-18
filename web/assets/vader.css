@@ -1,0 +1,11 @@
+body{
+background-image: url(https://i.imgur.com/R3jj30p.jpg?1);
+    font-family: Fiilxgirl;
+}
+.card{
+    margin-top: 3rem;
+    box-shadow: 5px 10px;
+}
+.btn {
+    background-color: #000000;
+}

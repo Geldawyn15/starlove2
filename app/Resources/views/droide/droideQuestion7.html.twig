@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/home.css">
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mx-auto   " style="width: 30rem;">
+                    <img class="card-img-top img-responsive" src="{{ robot.image }}" alt="Card image cap">
+                    <span class="username">{{ robot.name }}</span>
+                    <span class="species">{{ robot.species }}</span>
+                </div>
+                <div class="row question">
+                    <div class="col-md-8 d-flex justify-content-end mt-5 question">
+                        <p>Tu es plutôt anDROÏDE ou Apple ?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 left ">
+                <div class="card  mx-auto toto" style="width: 25rem;">
+                    <img class="card-img-top img-responsive" src="{{ image }}" alt="Card image cap">
+                    <span class="username">{{ username }}</span>
+                    <span class="species"> {{ species }}</span>
+                </div>
+                <div class="row justify-content-center boutton">
+                    <div class="col-md-3 tata">
+                        <a href="/question8" class="oui btn btn-lg text-white d-flex justify-content-center" style="font-size: 17px;" >anDROÏDE</a>
+                    </div>
+                    <div class="col-md-3 tata">
+                        <a href="/jonbrisé" class="non btn btn-lg text-white" style="font-size: 17px;" >Apple</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

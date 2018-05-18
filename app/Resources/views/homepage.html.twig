@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/home.css">
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mx-auto   " style="width: 30rem;">
+                    <img class="card-img-top img-responsive" src="https://i.imgur.com/OBHNVUG.jpg" alt="Card image cap">
+                    <span class="username">Donald Trump</span>
+                    <span class="species">Human</span>
+                </div>
+                <div class="row ">
+                    <div class="col-md-6 d-flex justify-content-end mt-5">
+                        <a href="#" class="btn text-white">Like</a>
+                    </div>
+                    <div class="col-md-6 mt-5">
+                        <a href="/edouard" class="btn text-white">Dislike</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 left ">
+                <div class="card  mx-auto toto" style="width: 25rem;">
+                    <img class="card-img-top img-responsive" src="{{ image }}" alt="Card image cap">
+                    <span class="username">{{ username }}</span>
+                    <span class="species"> {{ species }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
