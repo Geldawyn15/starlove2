@@ -157,6 +157,18 @@ class FrontController extends Controller
     }
 
     /**
+<<<<<<< HEAD
+     * @Route("/vader", name="vader")
+     */
+    public function VaderAction(Request $request)
+    {
+        $form = $this->createForm('AppBundle\Form\FilterType');
+        $form->handleRequest($request);
+
+        return $this->render("vader.html.twig");
+    }
+
+=======
      * @Route("/question2", name="question2")
      * @Method("GET")
      */
@@ -302,5 +314,6 @@ class FrontController extends Controller
         ]);
 
     }
+>>>>>>> cadfc863ad299c9eb52735cb7c173fae20a52823
 
 }
