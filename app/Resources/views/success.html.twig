@@ -1,13 +1,19 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="/assets/succes.css">
+    <link rel="stylesheet" href="/assets/success.css">
 {% endblock %}
 
 {% block body %}
-    <p>Nous avons remarquer ta préférence pour les droids, amuse toi bien!
-    A bientot.
-    </p>
+    <div class="container-fluid d-flex justify-content-center">
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+         <div class="card1">Match</div>
+            <div class="card-body text-dark">
+                <p class="card-text">Nous avons remarquer ta frérence pour les droids! Amuse toi bien.</p>
+                <h5 class="card-title">À bientôt</h5>
+         </div>
+        </div>
+    </div>
 
 {% endblock %}
 
