@@ -1,0 +1,15 @@
+body{
+    background-image: url(https://i.imgur.com/14uH65r.jpg);
+}
+.row {
+    margin-top: 10px;
+}
+.list-group{
+    margin-top: 100px;
+}
+.liké {
+    background-color: deeppink;
+}
+.btn {
+    background-color: deeppink;
+}
